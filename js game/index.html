@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Fight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="body">
+    <header>
+        <img class="logo" title="Reset Game" src="./assets/Pokemon_logo.png" alt="Pokemon">
+    </header>
+    <div class="playground">
+        <div class="pokemon character" style="display: none;">
+            <span class="lvl">Lv. 1</span>
+            <img src="" class="sprite" id="character-image">
+            <div class="details">
+                <h2 class="name" id="name-character"></h2>
+                <div class="hp">
+                    <div class="bar">
+                        <div class="health" id="progressbar-character" style="width: 100%;"></div>
+                    </div>
+                    <span class="text" id="health-character"></span>
+                </div>
+            </div>
+        </div>
+        <div class="pokemon enemy" style="display: none;">
+            <span class="lvl">Lv. 1</span>
+            <img src="" class="sprite" id="enemy-image">
+            <div class="details">
+                <h2 class="name" id="name-enemy"></h2>
+                <div class="hp">
+                    <div class="bar">
+                        <div class="health" id="progressbar-enemy" style="width: 100%;"></div>
+                    </div>
+                    <span class="text" id="health-enemy"></span>
+                </div>
+            </div>
+        </div>
+        <div class="control" style="display: none;">
+            <button class="button" id="btn-kick">Thunder Jolt</button>
+            <button class="button" id="btn-kick-strong">Thunder Shock</button>
+        </div>
+        
+        <button class="button" id="switch-pokemon" style="display: none;">Сменить Покемона</button>
+
+        <button class="button" id="start-game">Start Game</button>
+        <div id="victory-counter">Victories: <span id="victory-count">0</span></div>
+    </div>
+    <div id="logs"></div>
+</div>
+<script type="module" src="js/logs.js"></script>
+<script type="module" src="js/Pokemon.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
